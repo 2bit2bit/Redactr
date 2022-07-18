@@ -8,6 +8,51 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <h1>Redactr</h1>
+    <header>
+      <h1>Redactr</h1>
+    </header>
+    <main>
+      <form>
+        <section>
+          <label for="words"> Word(s) To Scramble:</label>
+          <input
+            type="text"
+            name="words"
+            id="words"
+            placeholder="word(s) to scramble"
+          />
+        </section>
+
+        <section>
+          <div>
+            <button id="advance-toggle">v</button>
+            Advance options
+          </div>
+
+          <div id="advance-options">
+            <label for="replace">Replace with:</label>
+            <input type="text" id="replace" /><br />
+            <label for="case-sensitivity"> case sensitive:</label>
+            <input type="checkbox" id="case-sensitivity" />
+          </div>
+        </section>
+
+        <section>
+          <textarea name="original-text" id="original-text"></textarea>
+          <div>
+            <button id="paste">paste</button>
+            <button id="scramble">scramble</button>
+            <button id="copy">copy</button>
+          </div>
+        </section>
+      </form>
+      <section>
+        words scaned: 00 <br />
+        words scrambled: 00 <br />
+        character scrambled: 00 <br />
+        time it took: 00 <br />
+      </section>
+    </main>
+    <footer>altschools</footer>
   </body>
 </html>
