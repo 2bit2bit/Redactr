@@ -34,7 +34,7 @@
           <div class="advance-options">
 
             <label for="replace">Replace with:
-            <input type="text" id="replace" /><br />
+            <input type="text" id="replace" placeholder="replace with.."/><br />
           </label>
             <label for="case-sensitivity"> Case Sensitivity:
             <input type="checkbox" id="case-sensitivity" />
@@ -46,10 +46,11 @@
 
         <section>
           <textarea name="text" id="text"></textarea>
+
           <div class="action-buttons">
-            <button id="paste">paste</button>
-            <button id="scramble">scramble</button>
-            <button id="copy">copy</button>
+            <input type="button" id="paste" value="Paste">
+            <input type="button" id="redact" value="Redact now">
+            <input type="button" id="copy" value="Copy">
           </div>
         </section>
       </form>
