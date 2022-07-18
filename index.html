@@ -15,44 +15,51 @@
       <form>
         <section>
           <label for="words"> Word(s) To Scramble:</label>
+          <!-- <span class="tool-tip">for multiple words, give space between each word</span> -->
           <input
             type="text"
             name="words"
             id="words"
             placeholder="word(s) to scramble"
           />
+          
         </section>
 
         <section>
-          <div>
-            <button id="advance-toggle">v</button>
+          <div class="advance-toggle">
             Advance options
+            <span>&#9660</span>            
           </div>
 
-          <div id="advance-options">
-            <label for="replace">Replace with:</label>
+          <div class="advance-options">
+
+            <label for="replace">Replace with:
             <input type="text" id="replace" /><br />
-            <label for="case-sensitivity"> case sensitive:</label>
+          </label>
+            <label for="case-sensitivity"> Case Sensitivity:
             <input type="checkbox" id="case-sensitivity" />
+        
+          </label>
+
           </div>
         </section>
 
         <section>
-          <textarea name="original-text" id="original-text"></textarea>
-          <div>
+          <textarea name="text" id="text"></textarea>
+          <div class="action-buttons">
             <button id="paste">paste</button>
             <button id="scramble">scramble</button>
             <button id="copy">copy</button>
           </div>
         </section>
       </form>
-      <section>
-        words scaned: 00 <br />
-        words scrambled: 00 <br />
-        character scrambled: 00 <br />
-        time it took: 00 <br />
+      <section class="stats">
+        Words scaned: 00 <br />
+        Words scrambled: 00 <br />
+        Character scrambled: 00 <br />
+        Time: 00 <br />
       </section>
     </main>
-    <footer>altschools</footer>
+    <footer>2022 &#169;2bit, All rights reserved</footer>
   </body>
 </html>
