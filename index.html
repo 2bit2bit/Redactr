@@ -10,6 +10,8 @@
   <body>
     <header>
       <h1>Redactr</h1>
+      <p><a href="README.md">About</a></p>
+
     </header>
     <main>
       <form>
@@ -36,7 +38,16 @@
           <div class="advance-options">
 
             <label for="replace">Replace with:
-            <input type="text" id="replace-with" placeholder="replace with.."/><br />
+            <input list = "replace" id="replace-with" placeholder="replace with..">
+              <datalist id="replace" >
+              <option value="****" selected>****</option>
+              <option value="....">....</option>
+              <option value="####">####</option>
+              <option value="----">----</option>
+            </datalist>
+           
+              
+              <br />
           </label>
             <label for="case-sensitivity"> Case Sensitivity:
             <input type="checkbox" id="case-sensitivity" />
@@ -63,6 +74,6 @@
         Time: -- <br />
       </section>
     </main>
-    <footer>2022 &#169;2bit, All rights reserved</footer>
+    <footer>2022 &#169;2bit2bit</footer>
   </body>
 </html>

@@ -23,12 +23,20 @@ header {
     linear-gradient(45deg, rgb(26, 83, 92), transparent);
   color: white;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
   margin: 0;
 }
 
+header p a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: x-small;
+}
 main {
   padding: 1rem;
   background-color: rgba(247, 255, 247);
@@ -53,7 +61,8 @@ label {
   color: rgb(26, 83, 92);
 }
 
-input[type="text"] {
+input[type="text"],
+#replace-with {
   height: 1.8rem;
   margin: 0.5rem 0 0 0;
   padding: 0.5rem;
@@ -64,6 +73,7 @@ input[type="text"] {
 }
 
 input[type="text"]:focus,
+#replace-with:focus,
 textarea:focus {
   outline: 1px solid rgb(26, 83, 92);
 }
@@ -96,6 +106,9 @@ input[type="text"] + p {
   overflow: hidden;
 }
 
+#replace-with {
+  margin-bottom: 6px;
+}
 input[type="checkbox"] {
   background-color: rgb(26, 83, 92);
   vertical-align: middle;

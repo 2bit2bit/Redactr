@@ -71,9 +71,9 @@ function redactHandler() {
         wordReg = new RegExp("[?!^ .,?!;\r\n\s]" + word.trim() + "[?!^ .,?!;\r\n\s]", __caseSensitivity )
 
         if (textToReplace.match(wordReg))  {
-            wordScrambled = textToReplace.match(wordReg).length
+            wordScrambled = textToReplace.match(wordReg).length 
             chracterScrambled = wordScrambled * word.trim().length
-            totalWordScrambled += wordScrambled
+            totalWordScrambled += wordScrambled * word.split(" ").length
             totalChracterScrambled += chracterScrambled
         }
 
@@ -95,10 +95,14 @@ function redactHandler() {
     stats.innerText = `Words scaned: ${wordsScanned}
         Words scrambled: ${totalWordScrambled}
         Character scrambled: ${totalChracterScrambled}
-        Time: ${timeTaken}ms  
+        Time: ${timeTaken} ms  
     `
 
+    window.scrollBy(0, 100);
+
 }
+
+//make it such that punctuation is not removed
 
 
 
