@@ -32,6 +32,7 @@ function advanceToggleHandler() {
 }   
 
 
+
 function redactHandler() {
     startTime = performance.now()
 
@@ -43,7 +44,7 @@ function redactHandler() {
     }
     
     if (text.value.trim()) {
-        textToReplace = " " + text.value.trim() + " "
+        textToReplace = text.value.trim()
     } else {
         alert("enter text to scramble")
         return
@@ -51,9 +52,9 @@ function redactHandler() {
     
 
     if (replaceWith.value.trim()) {
-        wordToReplaceWith = " " + replaceWith.value.trim() + " "
+        wordToReplaceWith = replaceWith.value.trim()
     } else {
-        wordToReplaceWith = " **** "
+        wordToReplaceWith = "****"
     }
 
     if (caseSensitivity.checked) {
@@ -67,19 +68,18 @@ function redactHandler() {
     totalChracterScrambled = 0
 
     
-    wordsToReplace.forEach(word => {
-        wordReg = new RegExp("[?!^ .,?!;\r\n\s]" + word.trim() + "[?!^ .,?!;\r\n\s]", __caseSensitivity )
-
+    wordsToReplace.forEach(word => {    
+        wordReg = new RegExp(`(?<![a-z])${word.trim()}(?![a-z])`, __caseSensitivity )
+        
         if (textToReplace.match(wordReg))  {
             wordScrambled = textToReplace.match(wordReg).length 
+            
             chracterScrambled = wordScrambled * word.trim().length
             totalWordScrambled += wordScrambled * word.split(" ").length
             totalChracterScrambled += chracterScrambled
         }
 
         textToReplace = textToReplace.replace(wordReg, wordToReplaceWith)
-        textToReplace = textToReplace.replace(wordReg, wordToReplaceWith)
-        textToReplace = textToReplace.replace(/\s\s/g, " ")
 
         text.value = textToReplace.trim()
     });
@@ -101,8 +101,6 @@ function redactHandler() {
     window.scrollBy(0, 100);
 
 }
-
-//make it such that punctuation is not removed
 
 
 

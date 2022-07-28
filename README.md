@@ -17,3 +17,4 @@ and then Display some stats like how many words were scanned, how many matched t
 
 Allow the user specify what to use in replacing the words, so that the app can do the scrambling with what the user provides, be it asterisks, questions marks, dashes, underscores, or even other words
 and also decide if the app should be case sensitive or not
+    
